@@ -30,7 +30,7 @@ key: file://README.md  # Read from file
  ```ini
 [Section]
 key: plain, text, comma, separated
-key: file://README.md  # Read from file. Each line is an item in the list.
+key: file://requirements.txt  # Read from file. Each line is an item in the list.
 ```
 4. Debug the generated setup kwargs with:
 

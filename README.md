@@ -17,7 +17,21 @@ curl https://raw.githubusercontent.com/LowieHuyghe/easier-python-setup-script/ma
 wget -O setup.py https://raw.githubusercontent.com/LowieHuyghe/easier-python-setup-script/master/setup.py
 wget -O setup.config.ini https://raw.githubusercontent.com/LowieHuyghe/easier-python-setup-script/master/setup.config.ini
 ```
-3. Change `setup.config.ini` to your likings
+3. Change `setup.config.ini` to your likings:
+  * Setup-kwargs that expect plain string:
+
+ ```ini
+[Section]
+key: plain text value
+key: file://README.md  # Read from file
+```
+  * Setup-kwargs that expect lists:
+
+ ```ini
+[Section]
+key: plain, text, comma, separated
+key: file://README.md  # Read from file. Each line is an item in the list.
+```
 4. Debug the generated setup kwargs with:
 
  ```bash

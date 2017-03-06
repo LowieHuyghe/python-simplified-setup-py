@@ -2,7 +2,7 @@
 
 An easier python setup script. Keep your `setup.py` organized with a simple ini-config-file.
 
-Example: [setup.config.ini](https://github.com/LowieHuyghe/easier-python-setup-script/blob/master/setup.config.ini)
+Example: [setup.config.ini](https://github.com/LowieHuyghe/easier-python-setup-script/blob/master/setup.config.example.ini)
 
 
 ## Installation

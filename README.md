@@ -1,25 +1,25 @@
-# Easier Python Setup Script
+# Python Package Easier Setup Script
 
 An easier python setup script. Keep your `setup.py` organized with a simple ini-config-file.
 
-Example: [setup.config.ini](https://github.com/LowieHuyghe/easier-python-setup-script/blob/master/setup.config.example.ini)
+Example: [setup.config.ini](https://github.com/LowieHuyghe/python-package-easier-setup-script/blob/master/setup.config.example.ini)
 
 
 ## Installation
 
 1. `cd` into your project directory
-2. Copy the files in your Python project:
+2. Add the project as a submodule:
 
  ```bash
-# Curl
-curl https://raw.githubusercontent.com/LowieHuyghe/easier-python-setup-script/master/setup.py -o setup.py
-curl https://raw.githubusercontent.com/LowieHuyghe/easier-python-setup-script/master/setup.config.ini -o setup.config.ini
-
-# Wget
-wget -O setup.py https://raw.githubusercontent.com/LowieHuyghe/easier-python-setup-script/master/setup.py
-wget -O setup.config.ini https://raw.githubusercontent.com/LowieHuyghe/easier-python-setup-script/master/setup.config.ini
+git submodule add git@github.com:LowieHuyghe/python-package-easier-setup-script.git setup
 ```
-3. Change `setup.config.ini` to your likings:
+3. Copy the example-files to your project
+
+ ```bash
+cp ./setup/setup.example.py ./setup.py
+cp ./setup/setup.config.example.ini ./setup.config.ini
+```
+4. Change `setup.config.ini` to your likings:
   * Setup-kwargs that expect plain string:
 
  ```ini
@@ -34,7 +34,7 @@ key: file://README.md  # Read from file
 key: plain, text, comma, separated
 key: file://requirements.txt  # Read from file. Each line is an item in the list.
 ```
-4. Debug the generated setup kwargs with:
+5. Debug the generated setup kwargs with:
 
  ```bash
 python setup.py --debug

@@ -18,12 +18,6 @@ except ImportError:
     from urllib.error import URLError
 
 
-# The path to the classifiers and the config
-classifiers_path = 'setup.classifiers.txt'
-config_path = 'setup.config.ini'
-
-
-# Setup-object
 class Setup(object):
 
     def __init__(self, base_path, classifiers_path, config_path):
@@ -287,8 +281,3 @@ class Setup(object):
 
         else:
             setuptools.setup(**arguments)
-
-
-# Construct and setup
-base_path = os.path.abspath(os.path.dirname(__file__))
-Setup(base_path, classifiers_path, config_path).setup()

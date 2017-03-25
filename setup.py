@@ -246,7 +246,9 @@ class Setup(object):
                     def run(self):
                         """Run command."""
                         process = Popen(self.command, shell=True)
-                        process.wait()
+                        return_code = process.wait()
+                        if return_code != 0:
+                            exit(return_code)
 
                 commands[command_name] = CustomCommand
         if commands:

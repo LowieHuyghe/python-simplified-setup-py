@@ -20,11 +20,10 @@ except ImportError:
 
 class EasierSetup(object):
 
-    def __init__(self, base_path, classifiers_path, config_path):
+    def __init__(self, base_path, config_path):
         """
         Construct setup
         :param base_path:           The base path
-        :param classifiers_path:    Path to the classifiers
         :param config_path:         Path to the config
         """
 

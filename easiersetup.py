@@ -18,7 +18,7 @@ except ImportError:
     from urllib.error import URLError
 
 
-class Setup(object):
+class EasierSetup(object):
 
     def __init__(self, base_path, classifiers_path, config_path):
         """
@@ -29,9 +29,10 @@ class Setup(object):
         """
 
         self.base_path = base_path
+        self.current_path = os.path.abspath(os.path.dirname(__file__))
 
-        self.classifiers = self._load_classifiers(classifiers_path)
-        self.config = self._load_config(config_path)
+        self.classifiers = self._load_classifiers(os.path.join(self.current_path, 'classifiers.txt'))
+        self.config = self._load_config(os.path.join(self.base_path, config_path))
 
     def _load_classifiers(self, classifiers_path):
         """
@@ -39,8 +40,6 @@ class Setup(object):
         :param classifiers_path:    Path to the classifiers
         :return:                    list
         """
-
-        classifiers_path = os.path.join(self.base_path, classifiers_path)
 
         # Get classifiers if not already fetched
         if not os.path.isfile(classifiers_path):
@@ -80,7 +79,7 @@ class Setup(object):
         """
 
         config_parser = ConfigParser.ConfigParser()
-        config_parser.read(os.path.join(self.base_path, config_path))
+        config_parser.read(config_path)
 
         config = {}
         for section in config_parser.sections():

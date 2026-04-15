@@ -9,14 +9,14 @@ name: mypackage
 version: scm
 description: My package
 long_description: file://README.md
-url: https://github.com/LowieHuyghe/my-package
+url: https://github.com/your-username/my-package
 license: MIT
 keywords: my, package
 requirements: file://requirements.txt
 
 [Author]
-name: Lowie Huyghe
-email: LowieHuyghe@users.noreply.github.com
+name: Your Name
+email: your@email.com
 
 [Classifiers]
 status: 3
@@ -48,10 +48,10 @@ my_command-description: This is my command
 2. Add this project as a squashed subtree:
 
  ```bash
-git subtree add --prefix setup git@github.com:LowieHuyghe/python-simplified-setup-py.git master --squash
+git subtree add --prefix setup git@github.com:your-username/python-simplified-setup-py.git master --squash
 
 # To update:
-git subtree pull --prefix setup git@github.com:LowieHuyghe/python-simplified-setup-py.git master --squash
+git subtree pull --prefix setup git@github.com:your-username/python-simplified-setup-py.git master --squash
 ```
 3. Copy the example-files to your project
 
